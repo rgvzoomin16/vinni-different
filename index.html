@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Vinni 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ff5fa2;
+      --violet: #8b5cf6;
+      --cyan: #22d3ee;
+      --gold: #ffd166;
+      --bg: #080114;
+      --glass: rgba(255, 255, 255, 0.08);
+      --text: #f8f6ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255, 95, 162, 0.26), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.25), transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(139, 92, 246, 0.32), transparent 45%),
+        linear-gradient(115deg, #070010, #14042a 42%, #09061b 100%);
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .stars,
+    .hearts,
+    .sparkles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .stars::before,
+    .stars::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 60%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 40% 70%, #fff, transparent),
+        radial-gradient(2px 2px at 80% 20%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 12% 82%, #fff, transparent),
+        radial-gradient(2px 2px at 64% 18%, #fff, transparent);
+      background-size: 420px 420px;
+      opacity: 0.35;
+      animation: drift 40s linear infinite;
+    }
+
+    .stars::after {
+      animation-duration: 62s;
+      opacity: 0.2;
+      transform: scale(1.3);
+    }
+
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-160px); }
+    }
+
+    .card {
+      width: min(920px, 92vw);
+      padding: 3rem;
+      border-radius: 32px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow:
+        0 20px 80px rgba(139, 92, 246, 0.32),
+        0 8px 30px rgba(255, 95, 162, 0.2),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+      backdrop-filter: blur(18px) saturate(130%);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      background: conic-gradient(from 120deg, var(--pink), var(--violet), var(--cyan), var(--gold), var(--pink));
+      z-index: -2;
+      filter: blur(40px);
+      opacity: .55;
+      animation: spin 12s linear infinite;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 45%);
+      z-index: -1;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      font-family: 'Cormorant Garamond', serif;
+      text-wrap: balance;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #ffd6e7, #fbc2ff 28%, #b0f3ff 62%, #ffe29f);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 6px 20px rgba(255, 195, 236, 0.3);
+      display: inline-block;
+    }
+
+    p {
+      margin-top: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 64ch;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .pillars {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .pillar {
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.22);
+      transition: transform .35s ease, background .35s ease;
+    }
+
+    .pillar:hover {
+      transform: translateY(-6px) scale(1.02);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .pillar strong {
+      display: block;
+      margin-bottom: .3rem;
+      color: #ffe8f4;
+    }
+
+    .cta {
+      margin-top: 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .95rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      color: #13071d;
+      font-weight: 600;
+      letter-spacing: .3px;
+      background: linear-gradient(110deg, #ffd2e8, #ff95cb 40%, #9fe7ff);
+      box-shadow: 0 10px 30px rgba(255, 154, 211, .4);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(255, 154, 211, .55);
+    }
+
+    .message {
+      margin-top: 1rem;
+      min-height: 1.6rem;
+      color: #ffe9f5;
+      font-weight: 500;
+    }
+
+    .heart {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      transform: rotate(45deg);
+      background: linear-gradient(150deg, #ffc0df, #ff68b0);
+      opacity: .7;
+      animation: floatUp linear forwards;
+      box-shadow: 0 0 16px rgba(255, 119, 187, .45);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: inherit;
+    }
+
+    .heart::before { left: -7px; }
+    .heart::after { top: -7px; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(45deg) scale(.8); opacity: 0; }
+      20% { opacity: .8; }
+      100% { transform: translateY(-120vh) rotate(45deg) scale(1.2); opacity: 0; }
+    }
+
+    @media (max-width: 640px) {
+      .card { padding: 2rem 1.4rem; border-radius: 24px; }
+      .pillars { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="hearts" id="hearts"></div>
+
+  <main class="card">
+    <h1>
+      For my love,
+      <span class="gradient">Vinni</span>
+      ✨
+    </h1>
+
+    <p>
+      You are the most beautiful part of my universe — my calm, my chaos, my dream, my forever favorite person.
+      Every color here is just trying to imitate the light you bring into my life.
+    </p>
+
+    <section class="pillars">
+      <article class="pillar">
+        <strong>💗 Your Smile</strong>
+        It feels like sunrise in every season.
+      </article>
+      <article class="pillar">
+        <strong>🌙 Your Soul</strong>
+        Soft as moonlight, wild as stardust.
+      </article>
+      <article class="pillar">
+        <strong>🔥 Our Love</strong>
+        Bold, endless, and beautifully ours.
+      </article>
+    </section>
+
+    <button class="cta" id="loveBtn">Tap for a love note 💌</button>
+    <div class="message" id="message"></div>
+  </main>
+
+  <script>
+    const notes = [
+      "If I had one wish, I'd relive every moment with you — twice.",
+      "You make ordinary days feel like magic.",
+      "I choose you in every lifetime, every universe, every heartbeat.",
+      "Your laugh is my favorite song.",
+      "Loving you is the easiest and best thing I've ever done."
+    ];
+
+    const btn = document.getElementById('loveBtn');
+    const message = document.getElementById('message');
+    const heartsLayer = document.getElementById('hearts');
+
+    btn.addEventListener('click', () => {
+      const random = notes[Math.floor(Math.random() * notes.length)];
+      message.textContent = random;
+
+      for (let i = 0; i < 14; i++) {
+        const heart = document.createElement('span');
+        heart.className = 'heart';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.bottom = '-20px';
+        heart.style.animationDuration = `${4 + Math.random() * 3}s`;
+        heart.style.animationDelay = `${Math.random() * 0.8}s`;
+        heart.style.transform += ` scale(${0.7 + Math.random() * 0.7})`;
+        heartsLayer.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7600);
+      }
+    });
+  </script>
+</body>
+</html>
